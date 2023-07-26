@@ -1,1 +1,2 @@
-./: openexr-images/file{**.exr} regression/file{**} file{asakusa.exr}
+./: openexr-images/file{**.exr} regression/file{** -日本語.exr} file{asakusa.exr}
+./: regression/file{日本語.exr}: include = ($cxx.target.class != 'windows')
