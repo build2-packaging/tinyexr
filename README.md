@@ -48,6 +48,7 @@ The library can be imported by the following declaration in a `buildfile`.
 There are no configuration options vailable.
 
 ## Issues and Notes
+- The examples are not supported by the package's build system, yet.
 - For now, the fuzzers are not compiled and run.
 - Currently, the configuration of dependencies for `tinyexr` is not handled by the package's build system. `tinyexr` uses `miniz` by default and it does not provide specific tests for other configurations. Furthermore, support for `zlib` and `stb`'s implementation of `zlib` only seems to be useful when using `tinyexr` without a build system as drop-in header file. So, for now, please refrain from using the following macros.
     + `TINYEXR_USE_MINIZ`
