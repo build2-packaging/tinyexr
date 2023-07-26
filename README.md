@@ -47,8 +47,14 @@ The library can be imported by the following declaration in a `buildfile`.
 ## Configuration
 There are no configuration options vailable.
 
-## Issues
-Currently, there are no known issues.
+## Issues and Notes
+- For now, the fuzzers are not compiled and run.
+- Currently, the configuration of dependencies for `tinyexr` is not handled by the package's build system. `tinyexr` uses `miniz` by default and it does not provide specific tests for other configurations. Furthermore, support for `zlib` and `stb`'s implementation of `zlib` only seems to be useful when using `tinyexr` without a build system as drop-in header file. So, for now, please refrain from using the following macros.
+    + `TINYEXR_USE_MINIZ`
+    + `TINYEXR_USE_STB_ZLIB`
+- `tinyexr` adds ZFP compression only as an experimental support on Linux and MacOS. Currently, it is not supported by the packgage's build system. Hence, please, refrain from using the following macro.
+    + `TINYEXR_USE_ZFP`
+- By using the macros `TINYEXR_USE_THREAD` or `TINYEXR_USE_OPENMP`, `tinyexr` is able to support multithreading by either using C++11 threads or OpenMP. Please note that the package's build system is not automatically adding dependencies and flags for `pthread` or OpenMP.
 
 ## Contributing
 Thanks in advance for your help and contribution to keep this package up-to-date.
