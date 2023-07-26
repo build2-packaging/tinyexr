@@ -1,0 +1,16 @@
+# We need at least two groups to allow
+# for the relative paths the test require.
+#
+: group
+{
+  : group
+  {
+    : test
+    {
+      ln -s $src_root/data/openexr-images ../../../openexr-images;
+      ln -s $src_root/data/asakusa.exr ../../asakusa.exr;
+      ln -s $src_root/data/regression regression;
+      $* >- &issue40.exr == 0
+    }
+  }
+}

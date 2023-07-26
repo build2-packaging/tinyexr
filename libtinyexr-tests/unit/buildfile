@@ -1,3 +1,0 @@
-./: regression/file{**} file{asakusa.exr}
-./: exe{tester}: {hxx ixx cxx}{*} hxx{catch.hpp.} $tinyexr testscript
-cxx.poptions += -DkOpenEXRImagePath="\"$src_root/openexr-images/\""

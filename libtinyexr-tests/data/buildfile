@@ -1,0 +1,1 @@
+./: openexr-images/file{**.exr} regression/file{**} file{asakusa.exr}

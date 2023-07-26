@@ -22,3 +22,5 @@ depends: * build2 >= 0.16.0
 depends: * bpkg >= 0.16.0
 
 depends: libminiz ^ 3.0.0
+
+tests: libtinyexr-tests == $

@@ -1,0 +1,4 @@
+# The tester uses the old version 1.4.0 of Catch
+# that is not provided as a package and only compiles with C++11.
+#
+exe{tester}: {hxx ixx cxx}{*} hxx{catch.hpp.} ../../hxx{tinyexr} $tinyexr testscript
