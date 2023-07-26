@@ -1,0 +1,6 @@
+$out_root/
+{
+  include tinyexr/
+}
+
+export $out_root/tinyexr/$import.target

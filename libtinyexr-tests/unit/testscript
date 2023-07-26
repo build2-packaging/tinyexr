@@ -1,0 +1,3 @@
+ln -s $src_base/regression regression;
+ln -s $src_base/asakusa.exr asakusa.exr;
+$* >- &issue40.exr == 0

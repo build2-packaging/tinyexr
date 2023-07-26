@@ -1,0 +1,3 @@
+./: {*/ -build/} manifest doc{*.md}
+
+tests/: install = false

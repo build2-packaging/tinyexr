@@ -1,0 +1,6 @@
+[submodule "upstream"]
+	path = upstream
+	url = https://github.com/syoyo/tinyexr.git
+[submodule "upstream-openexr-images"]
+	path = upstream-openexr-images
+	url = https://github.com/openexr/openexr-images

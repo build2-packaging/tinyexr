@@ -1,0 +1,22 @@
+: 1
+name: libtinyexr-tests
+version: 1.0.6
+project: tinyexr
+type: exe
+language: c++
+summary: Tests for libtinyexr
+license: BSD-3-Clause
+
+description-file: README.md
+
+url: https://github.com/syoyo/tinyexr
+src-url: https://github.com/syoyo/tinyexr
+doc-url: https://github.com/syoyo/tinyexr
+email: syoyo@lighttransport.com
+
+package-description-file: PACKAGE-README.md
+package-url: https://github.com/build2-packaging/tinyexr/
+package-email: packaging@build2.org
+
+depends: * build2 >= 0.16.0
+depends: * bpkg >= 0.16.0

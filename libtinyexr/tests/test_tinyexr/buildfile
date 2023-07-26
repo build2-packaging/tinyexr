@@ -1,0 +1,2 @@
+./: exe{test_tinyexr}: {hxx cxx}{**} $tinyexr testscript
+./: file{asakusa.exr}

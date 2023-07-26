@@ -1,0 +1,7 @@
+import libs = libminiz%lib{miniz}
+
+lib{tinyexr}: hxx{tinyexr} $libs
+{
+  cxx.export.poptions = "-I$src_base"
+  cxx.export.libs = $libs
+}

@@ -1,0 +1,17 @@
+cxx.std = 11
+
+using cxx
+
+hxx{*}: extension = h
+ixx{*}: extension = inc
+cxx{*}: extension = cc
+
+hxx{*}: cxx.importable = false
+
+test.target = $cxx.target
+
+exe{*}: test = true
+
+# Import 'tinyexr' by default.
+#
+import tinyexr = libtinyexr%lib{tinyexr}

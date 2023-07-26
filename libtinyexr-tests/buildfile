@@ -1,0 +1,2 @@
+./: {*/ -build/ -openexr-images/} manifest doc{*.md}
+./: openexr-images/file{**.exr}
