@@ -3,7 +3,7 @@
 
 !upstream*
 !libtinyexr-tests/data/openexr-images
-!libtinyexr-tests/data/regression
+!libtinyexr-tests/data/regression/**
 !asakusa.exr
 
 !*.h

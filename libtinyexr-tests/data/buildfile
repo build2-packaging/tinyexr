@@ -1,8 +1,1 @@
-./: openexr-images/file{**.exr} file{asakusa.exr}
-
-# It is futile trying to portably distribute files
-# with names that contain non-ASCII characters
-# on platforms, such as Windows.
-# Thus, it will be removed from the distribution.
-#
-./: regression/file{** -日本語.exr}
+./: openexr-images/file{**.exr} regression/file{**} file{asakusa.exr}
