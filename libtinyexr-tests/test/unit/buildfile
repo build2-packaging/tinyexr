@@ -1,4 +1,15 @@
 # The tester uses the old version 1.4.0 of Catch
 # that is not provided as a package and only compiles with C++11.
 #
-exe{tester}: {hxx ixx cxx}{*} hxx{catch.hpp.} ../../hxx{tinyexr} $tinyexr testscript
+./: exe{tester}: {hxx ixx cxx}{*} hxx{catch.hpp.} ../../hxx{tinyexr} $tinyexr testscript
+
+# The tester contains a test for files with
+# names that contain non-ASCII characters.
+# It is not possible to portably distribute
+# such files on platforms, such as Windows.
+# Because of that we removed the file '日本語.exr' from distribution
+# and, thus, the respective test must be removed from the tester as well.
+# To not alter the source files, the tester will be given the file 'tests.txt'
+# containing a list of all tests except 'utf8filename' that shall be executed.
+#
+./: file{tests.txt}

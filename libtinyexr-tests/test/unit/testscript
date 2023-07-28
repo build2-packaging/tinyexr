@@ -7,10 +7,13 @@
   {
     : test
     {
+      # After creating symlinks, the tester will be provided with
+      # a file that lists all the test names that shall be executed.
+      #
       ln -s $src_root/data/openexr-images ../../../openexr-images;
       ln -s $src_root/data/asakusa.exr ../../asakusa.exr;
       ln -s $src_root/data/regression regression;
-      $* >- &issue40.exr == 0
+      $* --input-file $src_base/tests.txt >- &issue40.exr == 0
     }
   }
 }
