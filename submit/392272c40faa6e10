@@ -1,0 +1,8 @@
+: 1
+name: libtinyexr-tests
+version: 1.0.6
+type: exe
+language: c++
+project: tinyexr
+summary: Tests for libtinyexr
+license: BSD-3-Clause
