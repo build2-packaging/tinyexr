@@ -1,6 +1,6 @@
 : 1
 name: libtinyexr
-version: 1.0.6
+version: 1.0.6+1
 project: tinyexr
 type: lib,binless
 language: c++
@@ -23,4 +23,9 @@ depends: * bpkg >= 0.16.0
 
 depends: libminiz ^ 3.0.0
 
-tests: libtinyexr-tests == $
+# The 'libtinyexr-tests' package has a size of 250 MiB
+# and is too large to be published on 'cppget.org'.
+# Instead, we use it for CI test runs and local testing.
+# Hence, we cannot mark the package as mandatory external tests.
+#
+# tests: libtinyexr-tests == $

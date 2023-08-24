@@ -1,6 +1,6 @@
 : 1
 name: libtinyexr-tests
-version: 1.0.6
+version: 1.0.6+1
 project: tinyexr
 type: exe
 language: c++
@@ -20,3 +20,10 @@ package-email: packaging@build2.org
 
 depends: * build2 >= 0.16.0
 depends: * bpkg >= 0.16.0
+
+# These tests are too large to be published and,
+# as a consequence, this package is not marked
+# as the mandatory tests package for 'libtinyexr'.
+# Instead, it explicitly depends on it.
+#
+depends: libtinyexr == $

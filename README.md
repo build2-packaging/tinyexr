@@ -1,26 +1,12 @@
-<h1 align="center">
-    build2 Package for tinyexr
-</h1>
+# build2 Package for tinyexr
 
-<p align="center">
-    This project builds and defines the build2 package for <a href="https://github.com/syoyo/tinyexr">tinyexr</a>.
-    It is a small, single header-only library to load and save OpenEXR (.exr) images and written in portable C++ (no library dependency except for STL).
-</p>
+This project builds and defines the build2 package for [`tinyexr`](https://github.com/syoyo/tinyexr).
+It is a small, single-header-only library to load and save OpenEXR (.exr) images, that is written in portable C++ (no library dependency except for STL).
 
-<p align="center">
-    <a href="https://github.com/syoyo/tinyexr">
-        <img src="https://img.shields.io/website/https/github.com/syoyo/tinyexr.svg?down_message=offline&label=Official&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://github.com/build2-packaging/tinyexr">
-        <img src="https://img.shields.io/website/https/github.com/build2-packaging/tinyexr.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://cppget.org/libtinyexr">
-        <img src="https://img.shields.io/website/https/cppget.org/libtinyexr.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://queue.cppget.org/libtinyexr">
-        <img src="https://img.shields.io/website/https/queue.cppget.org/libtinyexr.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running">
-    </a>
-</p>
+[![Official](https://img.shields.io/website/https/github.com/syoyo/tinyexr.svg?down_message=offline&label=Official&style=for-the-badge&up_color=blue&up_message=online)](https://github.com/syoyo/tinyexr)
+[![build2](https://img.shields.io/website/https/github.com/build2-packaging/tinyexr.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online)](https://github.com/build2-packaging/tinyexr)
+[![cppget.org](https://img.shields.io/website/https/cppget.org/libtinyexr.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online)](https://cppget.org/libtinyexr)
+[![queue.cppget.org](https://img.shields.io/website/https/queue.cppget.org/libtinyexr.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running)](https://queue.cppget.org/libtinyexr)
 
 ## Usage
 Make sure to add the stable section of the `cppget.org` repository to your project's `repositories.manifest` to be able to fetch this package.
@@ -48,6 +34,7 @@ The library can be imported by the following declaration in a `buildfile`.
 There are no configuration options available.
 
 ## Issues and Notes
+- The test data in the `libtinyexr-tests` package is more than 240 MiB in size and, as a consequence, not publishable on `cppget.org` because it is too large. Thus, it is not declared as the mandatory external tests package of `libtinyexr`. It can and should still be used for local testing and for CI runs.
 - By using the macros `TINYEXR_USE_THREAD` or `TINYEXR_USE_OPENMP`, `tinyexr` is able to support multithreading by either using C++11 threads or OpenMP. Please note that the package's build system is not automatically adding dependencies and flags for `pthread` or OpenMP.
 - Currently, the configuration of dependencies for `tinyexr` is not handled by the package's build system. `tinyexr` uses `miniz` by default and it does not provide specific tests for other configurations. Furthermore, support for `zlib` and `stb`'s implementation of `zlib` only seems to be useful when using `tinyexr` without a build system as drop-in header file. So, for now, please refrain from using the following macros.
     + `TINYEXR_USE_MINIZ`
@@ -85,4 +72,4 @@ Please, file an issue on [GitHub](https://github.com/build2-packaging/tinyexr/is
 4. Make an appropriate commit message by using imperative mood and a capital letter at the start and push the new commit to the `master` branch.
 5. Run `bdep ci` and test for errors and warnings.
 6. When successful, run `bdep release --tag --push` to push new tag version to repository.
-7. Run `bdep publish` to publish the package to [cppget.org](https://cppget.org).
+7. Run `bdep publish -d libtinyexr/` to publish the package to [cppget.org](https://cppget.org).
