@@ -24,7 +24,7 @@ If the stable section of `cppget.org` is not an option then add this Git reposit
 
 Add the respective dependency in your project's `manifest` file to make the package available for import.
 
-    depends: libtinyexr ^1.0.6
+    depends: libtinyexr ^1.0.8
 
 The library can be imported by the following declaration in a `buildfile`.
 

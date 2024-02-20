@@ -1,10 +1,10 @@
 : 1
 name: libtinyexr-tests
-version: 1.0.7
+version: 1.0.8
 project: tinyexr
 type: exe
 language: c++
-summary: Tests for libtinyexr
+summary: Tiny OpenEXR image loader/saver library, tests
 license: BSD-3-Clause
 
 description-file: README.md
