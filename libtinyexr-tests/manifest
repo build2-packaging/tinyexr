@@ -1,6 +1,6 @@
 : 1
 name: libtinyexr-tests
-version: 1.0.9-a.0.z
+version: 1.0.9
 type: exe
 language: c++
 project: tinyexr

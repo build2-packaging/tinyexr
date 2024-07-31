@@ -1,6 +1,6 @@
 : 1
 name: libtinyexr
-version: 1.0.9-a.0.z
+version: 1.0.9
 type: lib,binless
 language: c++
 project: tinyexr
