@@ -1,0 +1,8 @@
+: 1
+name: libtinyexr
+version: 1.0.9
+type: lib,binless
+language: c++
+project: tinyexr
+summary: OpenEXR image loader/saver library
+license: BSD-3-Clause
