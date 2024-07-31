@@ -1,31 +1,53 @@
+# Use whitelisting and ignore everything by default.
+#
 *
+
+# Don't ignore directories.
+#
 !*/
 
-!upstream*
-!libtinyexr-tests/data/openexr-images
-!libtinyexr-tests/data/regression/**
-!asakusa.exr
+# Don't ignore Git-specific files.
+#
+!.git*
 
+# Allow all files from upstream sources.
+#
+!upstream*
+
+# Don't ignore license and documentation files.
+#
+!*.md
+!*.txt
+!LICENSE
+
+# Don't ignore default C/C++ file extensions.
+#
 !*.h
 !*.c
 !*.hpp
 !*.cpp
 !*.cc
 !*.inc
-!*.in
-!*.orig
-!*.txt
 
-!.build2/**
+# Don't ignore source generation files.
+#
+!*.in
+
+# Add original source files that might have been changed.
+#
+!*.orig
+
+# Don't ignore standard build2 files.
+#
 !buildfile
 !bootstrap.build
-!root.build
 !export.build
+!root.build
 !*manifest
 !*testscript
 
-!*.md
-!LICENSE
-
-!.git*
-
+# Allow specific directory symlinks and data files.
+#
+!libtinyexr-tests/data/openexr-images
+!libtinyexr-tests/data/regression/**
+!asakusa.exr
