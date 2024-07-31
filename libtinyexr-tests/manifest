@@ -1,10 +1,10 @@
 : 1
 name: libtinyexr-tests
 version: 1.0.9-a.0.z
-project: tinyexr
 type: exe
 language: c++
-summary: Tiny OpenEXR image loader/saver library, tests
+project: tinyexr
+summary: OpenEXR image loader/saver library, tests
 license: BSD-3-Clause
 
 description-file: README.md
@@ -18,8 +18,8 @@ package-description-file: PACKAGE-README.md
 package-url: https://github.com/build2-packaging/tinyexr/
 package-email: packaging@build2.org
 
-depends: * build2 >= 0.16.0
-depends: * bpkg >= 0.16.0
+depends: * build2 >= 0.17.0
+depends: * bpkg >= 0.17.0
 
 # These tests are too large to be published and,
 # as a consequence, this package is not marked
